@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery.min.js" type="text/javascript"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="../js/angular.js" type="text/javascript"></script>
+		<script src="../js/form.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/contact.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<!--流失布局是占全频-->
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<!-- data-toggle="collapse"收缩 data-target="#navbar下拉"汉堡包标识 -->
+					<!-- 下面的代码是汉堡包标识 -->
+					<button type="button" class="navbar-toggle"
+						data-toggle="collapse" data-target="#navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>							
+					</button>
+					<a href="#"class="navbar-brand"><img src="../images/logo1.png" alt="" /></a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav ">
+						<li ><a href="index.html">网站首页<br/><span>Home</span></a></li>
+						<li><a href="about.html">关于品牌<br/><span>&nbsp;Works</span></a></li>
+						<li><a href="works.html">作品展示<br/><span>About</span></a></li>
+						<li><a href="travel.html">环球旅拍<br/><span>Travel</span></a></li>
+						<li class="active"><a href="contact.html">联系我们<br/><span>Contact us</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!---------轮播图---------------------------------------------------------->
+		<div class="container-fluid">
+			<div  id="myCarousel"class="carousel slide"data-ride="carousel"data-interval="2000">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel"data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel"data-slide-to="1"></li>
+					<li data-target="#myCarousel"data-slide-to="2"></li>
+					<li data-target="#myCarousel"data-slide-to="3"></li>
+					<li data-target="#myCarousel"data-slide-to="4"></li>
+					<li data-target="#myCarousel"data-slide-to="5"></li>
+					<li data-target="#myCarousel"data-slide-to="6"></li>
+					<li data-target="#myCarousel"data-slide-to="7"></li>
+				</ol>
+				<div class="carousel-inner " >
+					<div class="item active"><img src="../images/52.jpg" alt="" /></div>
+					<div class="item"><img src="../images/53.jpg" alt="" /></div>
+					<div class="item"><img src="../images/51.jpg" alt="" /></div>
+					<div class="item"><img src="../images/54.jpg" alt="" /></div>
+					<div class="item"><img src="../images/44.jpg" alt="" /></div>
+					<div class="item"><img src="../images/49.jpg" alt="" /></div>
+					<div class="item"><img src="../images/46.jpg" alt="" /></div>
+					<div class="item"><img src="../images/47.jpg" alt="" /></div>
+				</div>
+			</div>
+		</div>
+		<!-------main区域---------------------->
+		<div class="main">
+			<div id="ditu">
+			<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=68c92db1b95e9f508da8670282763e32"></script>
+			 <script type="text/javascript">
+			按照默认属性创建地图和标记
+			var map = new AMap.Map('ditu');
+		    map.setZoom(15);//设置缩放级别
+		    map.setCenter([116.2695662200,40.1312580041]);//设置中心坐标
+		    var marker = new AMap.Marker({//创建标记
+		        position: [116.2695662200,40.1312580041],//设置标记位置
+		        map:map//设置map属性，使得标记能被立即添加到地图上
+		    });
+			 //marker.setMap();移除点标记
+			<!--创建并且设置信息窗口-->
+			 <!--<!--AMap.plugin('AMap.AdvancedInfoWindow',function(){
+		       infowindow = new AMap.AdvancedInfoWindow({
+		        content: '<div class="info-title">高德地图</div><div class="info-content">'+'我的位置。<br/>'+'</div>',//设置信息窗口内容
+		        offset: new AMap.Pixel(0, -30)//设置窗口位置相对于标记的偏移量
+		      });
+		      infowindow.open(map,[116.2695662200,40.1312580041]);//创建好信息窗口后，立即调用open方法，让它显示在需要的位置
+			})
+			<!--添加工具条和比例尺子-->
+			AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){//加载工具条和比例尺两个插件放到数组中
+		        var toolBar = new AMap.ToolBar();//在回调函数里进行控件的生成和添加
+		        var scale = new AMap.Scale();
+		        map.addControl(toolBar);
+		        map.addControl(scale);
+		    })
+			//map.removeControl(toolBar);移除控件-->
+			  </script>
+		    </div> 
+			<div id="about">
+				<h2>会员登陆</h2>
+				<form action="" method="post">
+				<ul>
+					<li> 
+						电话号码:&nbsp;&nbsp;<input type="text"id="telephone"value=""  required >
+					</li>
+					 <li>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input type="password" id="psd1"value="" placeholder="" required>
+					</li>
+					<li>确认密码:&nbsp;<input type="password" id"psd2"value="" placeholder="请输入相同的密码" required>
+					<li>用&nbsp;&nbsp;&nbsp;&nbsp;户名:<input type="text" id="name"value="" placeholder="" required>
+					</li>
+					<li>邮箱地址:&nbsp;<input type="mail"id="mail"value=""  required></li>
+		
+					<li>上传头像:<input type="file"></li>
+					<li>留&nbsp;&nbsp;言:&nbsp;&nbsp;<textarea name="留言" cols="30" rows="10"></textarea>	</li>
+					<li>登&nbsp;&nbsp;录:&nbsp;&nbsp;<input type="submit" id="submit"value="登录"></li> 
+				</ul>
+				</form>
+			</div>
+			<div class="contact">
+				<ul>
+					<li>
+						<a href=""><img src="../images/qq.png" alt="" /></a>
+						<a href=""><h4>QQ</h4><h3>4008200</h3></a>
+					</li>
+					<li>
+						<a href=""><img src="../images/weixi.png" alt="" /></a>
+						<a href=""><h4>微信</h4><h3>shuijingzhilian</h3></a>
+					</li>
+					<li>
+						<a href=""><img src="../images/weibo.png" alt="" /></a>
+						<a href=""><h4>微博</h4><h3>水晶之恋</h3></a>
+					</li>
+					<li>
+						<a href=""><img src="../images/dianhua.png" alt="" /></a>
+						<a href=""><h4>电话</h4><h3>1332345678</h3></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-------pic区域　--------------------------------------------------------->
+		<div class="dw">
+			<img src="../images/icon.png" alt="" />
+			<img src="../images/tuy.png" alt="" />
+		</div>
+		<div class="footer">
+			<p>版权所有© 2007-2015 水晶之恋婚纱摄影，技术支持 水晶之恋全球旅拍</p>
+			<ul>
+				<li><a href="">客户评价 ｜</a></li>
+				<li><a href="">环球旅拍 ｜</a></li>
+				<li><a href="">关于品牌 ｜</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

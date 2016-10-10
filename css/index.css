@@ -1,0 +1,131 @@
+/*================导航条=====================================*/
+.nav{height:65px;z-index:100;}
+.navbar-inverse{background-color:#b79168;}
+.navbar-brand{padding:10px 50px;}
+#navbar .navbar-nav .active{background:#b79168;}
+#navbar li a{color:#fff;font-size:14px;font-family:"微软雅黑" ;}
+#navbar li a span{font-size:10px;padding:5px;}
+/*================轮播=========================*/
+#myCarousel{margin-top:60px;}
+#myCarousel ol .active{background-color:red;}
+.carousel img{width:100%;height:100%;}
+/*=============客片====================================*/
+.main{width:100%;height:auto;margin:0 auto;}
+.main p{text-align:center;padding-top:10px; color:#b79168;font-size:24px;font-family:"微软雅黑" ;}
+#myTab{width:100%;margin-left:5%;color:#b79168;font-size:20px;font-family:"微软雅黑";box-sizing:border-box;}
+#myTabContent ul{width:100%;list-style:none;overflow:hidden;}
+#myTabContent li{float:left;margin:25px 0px;width:25%;}
+#myTabContent ul li a{width:80%;position:relative;display:block;}
+#myTabContent ul li a img{width:100%;}
+#myTabContent ul li a span{position:absolute;left:0;bottom:3%;
+				color:white;font-size:18px;font-family:"微软雅黑";}
+#myTabContent ul li a span:nth-child(2){left:13%;top:50%;opacity:0;color:#543232;}
+#myTabContent ul li a::before{content:"";width:100%;height:20%;
+				position:absolute;left:0;bottom:0;background:#b79168;opacity:0.6;
+				}
+#myTabContent ul li a::after{content:"";width:80%;height:80%;background:white;
+					position:absolute;left:10%;top:10%;opacity:0;
+}
+#myTabContent ul li a:hover::before{height:0;transition:height 0.5s;  }
+#myTabContent ul li a:hover span:nth-child(3){opacity: 0;transition:height 0.5s;}
+#myTabContent ul li a:hover::after{opacity:0.5;transition:opacity 1s;}
+#myTabContent ul li a:hover span:nth-child(2){opacity:1;transition:opacity 1s;}
+@keyframes my{
+	from{height:0%;}
+	to{height:100%}
+}
+/*====================评价===================*/
+/*==================底部==================*/
+.dw{position:fixed;right:0px;bottom:0;z-index:111000;opacity:0;overflow:hidden;}
+/*.dw img:nth-child(2):hover{bottom:20%;opacity:1;}*/
+.dw:hover{transition:bottom 1s;bottom:30%;opacity: 1;}
+.contact{width:100%;background:#b79168;}
+.contact ul{list-style:none;overflow:hidden;margin-left:10px;padding:0 10px;}
+.contact ul li{width:25%;float:left;margin:10px 0;padding:0 15px;box-sizing:border-box;}
+.contact ul li a{width:49%;height:100%; display:block;float:left;margin:auto 0;}
+.contact ul li a:nth-child(1){border-radius:50%;background:#b79168;margin:15px 0;}
+.contact ul li a:nth-child(2){width:48%;margin-top:20px;margin-left:5px;}
+.contact ul li a h4{border-bottom:1px dashed gray;padding-bottom:10px;}
+.contact ul li a h4,h3{color:#fff;font-size:18px;}
+.contact ul li img{width:80%;border-radius:50%;margin:10%;background:white;box-sizing:border-box;}
+.contact ul li:hover a:nth-child(1){background:#fff;}
+.contact ul li img:hover{border-radius:50%;background:#b79168;}
+.footer{width:100%; background:#d6c7ad;font-size:18px;}
+.footer ul{overflow:hidden;list-style:none;padding:0 35%;padding-bottom:2%;box-sizing:border-box}
+.footer ul li{float:left;}
+.footer p{ color:black;text-align:center;padding:0 1%;padding-top:2%;overflow:hidden;}
+/*响应式============================*/
+@media screen  and (min-width: 100px) and (max-width: 360px) {
+	.main p{font-size:16px;}
+	#myTab{width:100%;font-size:10px;}
+	#myTabContent ul{width:100%;}
+	#myTabContent ul li{margin:10px;}
+	#myTabContent ul li a{width:80%;}
+	#myTabContent ul li a span{font-size:10px;}
+	.contact{width:100%;}
+	.contact ul{width:100%;overflow:hidden;padding:0 10px;}
+	.contact ul li{width:25%;margin:0 0;padding:0 0;}
+	.contact ul li a:nth-child(1){width:80%;margin:0 0;}
+	.contact ul li a:nth-child(2){width:0%;margin-top:0px;margin-left:0px;}
+	.contact ul li img{width:80%;margin:10%;}
+	.contact h3,h4{font-size:10px;display:none;}
+	.footer ul li{float:left;font-size:10px;}
+  .footer p{ color:black;text-align:left;padding:0 1%;padding-top:2%;font-size:10px;}
+}
+@media screen and (min-width: 360px) and (max-width:780px) {
+	.main p{font-size:20px;}
+	#myTab{width:100%;font-size:12px;}
+	#myTabContent ul{width:100%;}
+	#myTabContent ul li{width:47%;margin:10px 5px;float:left;}
+	#myTabContent ul li a{width:100%;}
+	#myTabContent ul li a span{font-size:14px;}
+	.contact{width:100%;}
+	.contact ul{width:100%;overflow:hidden;padding:0 10px;}
+	.contact ul li{width:25%;margin:0 0;padding:0 0;}
+	.contact ul li a:nth-child(1){width:80%;margin:0 0;}
+	.contact ul li a:nth-child(2){width:0%;margin-top:0px;margin-left:0px;}
+	.contact ul li img{width:80%;margin:10%;}
+	.contact h3,h4{font-size:8px;display:none;}
+	.footer ul{padding:0 15%;padding-bottom:2%;} 
+	.footer p{ color:black;text-align:center;padding:0 1%;padding-top:2%;font-size:12px;}
+	.footer ul li{float:left;font-size:12px;}
+  
+}
+@media screen and (min-width: 780px) and (max-width:960px) {
+	.main p{font-size:20px;}
+	#myTab{width:100%;font-size:14px;}
+	#myTabContent ul{width:100%;}
+	#myTabContent ul li{width:30%;margin:10px 10px;float:left;}
+	#myTabContent ul li a{width:100%;}
+	#myTabContent ul li a span{font-size:14px;}
+	.contact{width:100%;}
+	.contact ul{width:100%;overflow:hidden;padding:0 10px;}
+	.contact ul li{width:25%;margin:0 0;padding:0 0;}
+	.contact ul li a:nth-child(1){width:50%;margin:0 0;}
+	.contact ul li a:nth-child(2){width:48%;margin-top:0px;margin-left:0px;}
+	.contact ul li img{width:80%;margin:10%;}
+	.contact h3,h4{font-size:14px;}
+	.footer ul{padding:0 22%;padding-bottom:2%;} 
+	.footer p{ color:black;text-align:center;padding:0 1%;padding-top:2%;font-size:14px;}
+	.footer ul li{float:left;font-size:14px;}
+  
+}
+@media screen and (min-width:960px) and (max-width:1140px) {
+	.main p{font-size:20px;}
+	#myTab{width:100%;font-size:20px;}
+	#myTabContent ul{width:100%;}
+	#myTabContent ul li{width:25%;margin:10px 0px;float:left;}
+	#myTabContent ul li a{width:80%;}
+	#myTabContent ul li a span{font-size:14px;bottom:1%}
+	.contact{width:100%;}
+	.contact ul{width:100%;overflow:hidden;padding:0 10px;}
+	.contact ul li{width:25%;margin:0 0;padding:0 0;}
+	.contact ul li a:nth-child(1){width:50%;margin:0 0;}
+	.contact ul li a:nth-child(2){width:48%;margin-top:0px;margin-left:0px;}
+	.contact ul li img{width:80%;margin:10%;}
+	.contact h3,h4{font-size:18px;}
+	.footer ul{padding:0 25%;padding-bottom:2%;} 
+	.footer p{ color:black;text-align:center;padding:0 1%;padding-top:2%;font-size:22px;}
+	.footer ul li{float:left;font-size:18px;}
+  
+}

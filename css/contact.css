@@ -1,0 +1,38 @@
+.main{background:url('../images/bg.png') 150px 0;}
+.main #ditu{width:90%;height:500px;margin:auto;}
+.info-title {
+	background-color: rgba(0, 155, 255, 0.8);
+	color: white;
+	font-size: 14px;
+	font-weight: ligh ter;
+	letter-spacing: 1px;
+	line-height: 26px;
+	padding: 0 0 0 6px;
+}
+.info-content {
+	color: #666666;
+	line-height: 23px;
+	padding: 4px;
+}
+#about{width:70%;/*height:350px;*/border:1px solid gray;border-radius:10px;margin:10px auto;}
+h2{border-bottom:1px dashed blue;padding:10px 40%;color:red;opacity:0.6;}
+#about form{width:50%;margin:20px auto;padding-left:80px;}
+#about ul{list-style:none;}
+
+input{margin-bottom:20px;}
+/*.contact{width:100%;background:#e5be94;}
+.contact ul{list-style:none;overflow:hidden;margin-left:10px;padding:0 10px;}
+.contact ul li{width:25%;float:left;margin:10px 0;padding:0 15px;box-sizing:border-box;}
+.contact ul li a{width:49%;height:100%; display:block;float:left;margin:auto 0;}
+.contact ul li a:nth-child(1){border-radius:50%;background:#e5be94;margin:15px 0;}
+.contact ul li a:nth-child(2){width:48%;margin-top:20px;margin-left:5px;}
+.contact ul li a h4{border-bottom:1px dashed gray;padding-bottom:10px;}
+.contact ul li a h4,h3{color:#6f5221;font-size:20px;}
+.contact ul li img{width:80%;border-radius:50%;margin:10%;background:white;box-sizing:border-box;}
+.contact ul li:hover a:nth-child(1){background:#fff;}
+.contact ul li img:hover{border-radius:50%;background:#bc8c58;opacity:0.8;}*/
+.dw{position: relative;}
+.dw img{position:fixed;right:10px;bottom:0;z-index:111000;opacity:0;}
+.dw img:nth-child(2){left:10px;}
+.dw img:hover{transition:bottom 1s;bottom:30%;opacity: 1;}
+.dw img:nth-child(2):hover{bottom:20%;opacity:1;}
